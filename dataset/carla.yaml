@@ -1,0 +1,139 @@
+color_map :
+  0 : [255, 255, 255]  # None
+  1 : [70, 70, 70]     # Building
+  2 : [100, 40, 40]    # Fences
+  3 : [55, 90, 80]     # Other
+  4 : [255, 255, 0 ]   # Pedestrian
+  5 : [153, 153, 153]  # Pole
+  6 : [157, 234, 50]   # RoadLines
+  7 : [0, 0, 255]      # Road
+  8 : [255, 255, 255]  # Sidewalk
+  9 : [0, 155, 0]      # Vegetation
+  10 : [255, 0, 0]     # Vehicle
+  11 : [102, 102, 156] # Wall
+  12 : [220, 220, 0]   # TrafficSign
+  13 : [70, 130, 180]  # Sky
+  14 : [255, 255, 255] # Ground
+  15 : [150, 100, 100] # Bridge
+  16 : [230, 150, 140] # RailTrack
+  17 : [180, 165, 180] # GuardRail
+  18 : [250, 170, 30]  # TrafficLight
+  19 : [110, 190, 160] # Static
+  20 : [170, 120, 50]  # Dynamic
+  21 : [45, 60, 150]   # Water
+  22 : [145, 170, 100] # Terrain
+
+learning_map :
+  0 : 0
+  1 : 1
+  2 : 2
+  3 : 3
+  4 : 4
+  5 : 5
+  6 : 6
+  7 : 6
+  8 : 8
+  9 : 9
+  10: 10
+  11 : 2
+  12 : 5
+  13 : 3
+  14 : 7
+  15 : 3
+  16 : 3
+  17 : 2
+  18 : 5
+  19 : 3
+  20 : 3
+  21 : 3
+  22 : 7
+
+remap_color_map:
+  0 : [255, 255, 255]  # None
+  1 : [70, 70, 70]     # Building
+  2 : [100, 40, 40]    # Fences
+  3 : [55, 90, 80]     # Other
+  4 : [255, 255, 0]   # Pedestrian
+  5 : [153, 153, 153]  # Pole
+  6 : [0, 0, 255]      # Road
+  7 : [145, 170, 100] # Ground
+  8 : [240, 240, 240]  # Sidewalk
+  9 : [0, 155, 0]      # Vegetation
+  10 : [255, 0, 0]     # Vehicle
+
+label_to_names:
+  0 : Free
+  1 : Building
+  2 : Barrier
+  3 : Other
+  4 : Pedestrian
+  5 : Pole
+  6 : Road
+  7 : Ground
+  8 : Sidewalk
+  9 : Vegetation
+  10 : Vehicle
+
+content :
+  0 : 4166593275
+  1 : 42309744
+  2 : 8550180
+  3 : 478193
+  4 : 905663
+  5 : 2801091
+  6 : 6452733
+  7 : 229316930
+  8 : 112863867
+  9 : 29816894
+  10: 13839655
+  11 : 15581458
+  12 : 221821
+  13 : 0
+  14 : 7931550
+  15 : 467989
+  16 : 3354
+  17 : 9201043
+  18 : 61011
+  19 : 3796746
+  20 : 3217865
+  21 : 215372
+  22 : 79669695
+
+remap_content : 
+  0 : 4.16659328e+09
+  1 : 4.23097440e+07
+  2 : 3.33326810e+07
+  3 : 8.17951900e+06
+  4 : 9.05663000e+05
+  5 : 3.08392300e+06
+  6 : 2.35769663e+08
+  7 : 8.76012450e+07
+  8 : 1.12863867e+08
+  9 : 2.98168940e+07
+  10 : 1.38396550e+07
+
+split: # sequence numbers
+  train:
+    - Town01_Heavy   
+    - Town02_Heavy   
+    - Town03_Heavy   
+    - Town04_Heavy   
+    - Town05_Heavy   
+    - Town06_Heavy
+    - Town01_Medium
+    - Town02_Medium
+    - Town03_Medium
+    - Town04_Medium
+    - Town05_Medium
+    - Town06_Medium
+    - Town01_Light
+    - Town02_Light
+    - Town03_Light
+    - Town04_Light
+    - Town05_Light
+    - Town06_Light
+
+  valid:
+    - Town10_Heavy
+    - Town10_Medium
+    - Town10_Light
