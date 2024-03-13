@@ -10,7 +10,7 @@ with Triplane Diffusion
 > 
 > Jumin Lee*, Sebin Lee*, Changho Jo, Woobin Im, Juhyeong Seon and Sung-Eui Yoon* 
 
-[Paper](https://arxiv.org/abs/2403.07773) | [Project Page](https://sgvr.kaist.ac.kr/SemCity)
+[Paper](https://arxiv.org/abs/2403.07773) | [Project Page](https://sglab.kaist.ac.kr/SemCity)
 
 ## 📌 Setup
 We test our code on Ubuntu 20.04 with a single RTX 3090 or 4090 GPU.
