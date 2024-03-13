@@ -7,6 +7,7 @@ with Triplane Diffusion
 ![fig0](./figs/semcity.gif)
 
 > SemCity : Semantic Scene Generation with Triplane Diffusion
+> 
 > Jumin Lee*, Sebin Lee*, Changho Jo, Woobin Im, Juhyeong Seon and Sung-Eui Yoon* 
 
 [Paper](https://arxiv.org/abs/2403.07773) | [Project Page](https://sgvr.kaist.ac.kr/SemCity)
