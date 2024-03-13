@@ -88,10 +88,10 @@ The code is partly based on [guided-diffusion](https://github.com/openai/guided-
 ## Bibtex
 If you find this code useful for your research, please consider citing our paper:
 
-    @inproceeding{SemCity,
-        title = {SemCity: Semantic Scene Generation with Triplane Diffusion},
-        author = {Jumin Lee, Sebin Lee, Changho Jo, Woobin Im, Juhyeong Seon and Sung-Eui Yoon},
-        booktitle = {CVPR},
+    @inproceedings{lee2024semcity,
+        title={SemCity: Semantic Scene Generation with Triplane Diffusion},
+        author={Lee, Jumin and Lee, Sebin and Jo, Changho and Im, Woobin and Seon, Juhyeong and Yoon, Sung-Eui},
+        booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
         year={2024}
     }
 
