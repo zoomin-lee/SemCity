@@ -34,16 +34,6 @@ def get_args():
     args = parser.parse_args()
     return args
 
-'''def compose_featmaps(feat_xy, feat_xz, feat_yz, tri_size=(128,128,16)):
-    H, W, D = tri_size
-    empty_block = torch.zeros(list(feat_xy.shape[:-2]) + [D, D], dtype=feat_xy.dtype, device=feat_xy.device)
-    feat_yz = feat_yz.transpose(-1, -2)
-    composed_map = torch.cat(
-        [torch.cat([feat_xy, feat_xz], dim=-1),
-         torch.cat([feat_yz, empty_block], dim=-1)], 
-        dim=-2)
-    return composed_map
-'''
 @torch.no_grad()
 def save(args):    
     if args.dataset == 'kitti':
@@ -78,7 +68,7 @@ def save(args):
             triplane = model.encode(vox)
             
             if not args.voxel_fea :
-                triplane= compose_featmaps(triplane[0].squeeze(), triplane[1].squeeze(), triplane[2].squeeze(), tri_size)
+                triplane, _ = compose_featmaps(triplane[0].squeeze(), triplane[1].squeeze(), triplane[2].squeeze(), tri_size)
 
             file_idx = str(Path(path[0]).stem.split('_')[0])  # e.g., 002165
             folder_idx = str(Path(path[0]).parent.parent.stem)  # e.g., 00
