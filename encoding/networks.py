@@ -65,7 +65,7 @@ class AutoEncoderGroupSkip(nn.Module):
             self.norm = nn.InstanceNorm2d(args.geo_feat_channels)
         self.geo_feat_dim = args.geo_feat_channels
         self.pos = args.pos
-        self.pos_num_freq = 6  # the defualt value 6 like NeRF
+        self.pos_num_freq = 6  # the default value 6 like NeRF
         self.args = args
         
         print('triplane features are summed for decoding...')
