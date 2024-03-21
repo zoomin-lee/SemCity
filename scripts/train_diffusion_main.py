@@ -55,7 +55,7 @@ if __name__ == '__main__':
     add_diffusion_training_options(parser)
     parser.add_argument("--gpu_id", default=0, type=int)
     parser.add_argument("--save_path", type=str, default='')
-    parser.add_argument('--ssc_refine', default=False, type=bool)
+    parser.add_argument('--ssc_refine', action='store_true')
     parser.add_argument("--ssc_refine_dataset", default='monoscene', choices=['monoscene', 'occdepth', 'scpnet', 'ssasc'])
     
     parser.add_argument("--dataset", default='kitti', choices=['kitti', 'carla'])

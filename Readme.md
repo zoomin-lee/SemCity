@@ -36,7 +36,7 @@ In/outpainting and semantic scene completion refinement are only possible with S
 
 ### Triplane Autoencoder
 
-    python scripts/train_ae_main.py --triplane True --save_path exp/ae
+    python scripts/train_ae_main.py --save_path exp/ae
 
 When you are finished training the triplane autoencoder, save the triplane. 
 The triplane is a proxy representation of the scene for triplane diffusion training.
@@ -51,11 +51,11 @@ If you want to train semantic scene completion refinement, also save the triplan
 
 For training for semantic scene generation or in/outpainting,
 
-    python scripts/train_diffusion_main.py --ssc_refine False --triplane_loss_type l2 --save_path exp/diff
+    python scripts/train_diffusion_main.py --triplane_loss_type l2 --save_path exp/diff
 
 For training semantic scene completion refinement,
 
-    python scripts/train_diffusion_main.py --ssc_refine True --refine_dataset monoscene --triplane_loss_type l1 --save_path exp/diff
+    python scripts/train_diffusion_main.py --ssc_refine --refine_dataset monoscene --triplane_loss_type l1 --save_path exp/diff
 
 ## 📌 Sampling
 In `dataset/path_manager.py`, adjust the triplane autoencoder and triplane diffusion `.pt` paths to `AE_PATH` and `DIFF_PATH`.
