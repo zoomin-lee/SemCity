@@ -33,16 +33,16 @@ class SemKITTI(data.Dataset):
             split = semkittiyaml['split']['train']
             complt_num_per_class= np.asarray([7632350044, 15783539,  125136, 118809, 646799, 821951, 262978, 283696, 204750, 61688703, 4502961, 44883650, 2269923, 56840218, 15719652, 158442623, 2061623, 36970522, 1151988, 334146])
             compl_labelweights = complt_num_per_class / np.sum(complt_num_per_class)
-            self.weights = torch.Tensor(np.power(np.amax(compl_labelweights) / compl_labelweights, 1 / 3.0)).cuda()
+            self.weights = torch.Tensor(np.power(np.amax(compl_labelweights) / compl_labelweights, 1 / 3.0))
             
         elif imageset == 'val':
             split = semkittiyaml['split']['valid']
-            self.weights = torch.Tensor(np.ones(20) * 3).cuda()
+            self.weights = torch.Tensor(np.ones(20) * 3)
             self.weights[0] = 1
             
         elif imageset == 'test':
             split = semkittiyaml['split']['test']
-            self.weights = torch.Tensor(np.ones(20) * 3).cuda()
+            self.weights = torch.Tensor(np.ones(20) * 3)
             self.weights[0] = 1
         else:
             raise Exception('Split must be train/val/test')
