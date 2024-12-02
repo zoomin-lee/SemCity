@@ -95,3 +95,6 @@ If you find this code useful for your research, please consider citing our paper
         year={2024}
     }
 
+## 📌 License
+
+This project is released under the MIT License.
