@@ -40,7 +40,7 @@ class Trainer:
 
         # loss functions
         self.loss_fns = {}
-        self.loss_fns['ce'] = torch.nn.CrossEntropyLoss(weight=self.train_dataset.weights, ignore_index=255)
+        self.loss_fns['ce'] = torch.nn.CrossEntropyLoss(weight=self.train_dataset.weights.cuda(), ignore_index=255)
         self.loss_fns['lovasz'] = None
 
     def train(self):

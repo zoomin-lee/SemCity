@@ -22,7 +22,7 @@ class CarlaDataset(Dataset):
             
         complt_num_per_class= np.asarray([4.16659328e+09, 4.23097440e+07,  3.33326810e+07, 8.17951900e+06, 9.05663000e+05, 3.08392300e+06, 2.35769663e+08, 8.76012450e+07, 1.12863867e+08, 2.98168940e+07, 1.38396550e+07])
         compl_labelweights = complt_num_per_class / np.sum(complt_num_per_class)
-        self.weights = torch.Tensor(np.power(np.amax(compl_labelweights) / compl_labelweights, 1 / 3.0)).cuda()
+        self.weights = torch.Tensor(np.power(np.amax(compl_labelweights) / compl_labelweights, 1 / 3.0))
         
         self.imageset = imageset
 
